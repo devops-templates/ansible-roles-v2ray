@@ -1,6 +1,6 @@
 # Ansible Role: V2ray Server
 
-An Ansible Role that installing Shadowsocks Server  on Linux
+An Ansible Role that installing V2ray Server on Linux
 
 ## Requirements
 
@@ -27,7 +27,7 @@ None.
 Clone the project to a directory named `v2ray`:
 
 ```shell
-git clone git@github.com:devops-templates/ansible-roles-shadowsocks-server.git v2ray
+git clone git@github.com:devops-templates/ansible-roles-v2ray.git v2ray
 ```
 
 Move `hosts.example` and `v2ray.yml` to the same parent directory of `v2ray`:
