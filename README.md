@@ -14,7 +14,7 @@ Available variables are listed below, along with default values (see defaults/ma
 uuid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
 alterId: 64
 httpsPort: 443
-tlsPort:8887
+tlsPort: 8887
 h2Port: 8443
 ```
 
@@ -46,7 +46,7 @@ Move `hosts.example` and `v2ray.yml` to the same parent directory of `v2ray`:
         uuid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
         alterId: 64
         httpsPort: 443
-        tlsPort:8887
+        tlsPort: 8887
         h2Port: 8443
 ```
 
