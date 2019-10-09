@@ -18,7 +18,7 @@
     mode: '0755'
   with_items:
     - { src: "v2ray", dest: "{{V2rayBinDir}}/v2ray"}
-    - { src: "v2rayctl", dest: "{{V2rayBinDir}}/v2rayctl"}
+    - { src: "v2ctl", dest: "{{V2rayBinDir}}/v2ctl"}
 
 - name: upload v2ray.service
   template:
