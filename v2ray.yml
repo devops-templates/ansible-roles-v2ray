@@ -5,8 +5,10 @@
     - role: 'v2ray'
       vars:
           Clientid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
+          ServerName: 'example.com'
           HttpsPort: 443
           WsPath: '/ws'
+          PlainPort: 1887
           TlsPort: 8887
           Http2Port: 8443
           Http2Path: '/h2'

@@ -1,0 +1,9 @@
+---
+- name: Install acme.sh
+  command: curl https://get.acme.sh | sh
+
+- name: Issue cert
+  command: /root/.acme.sh/acme.sh --issue --dns dns_cf -d ${ServerName} -k ec-256
+
+- name: Install cert
+  command: /root/.acme.sh/acme.sh --installcert -d ${ServerName} --fullchainpath {{V2raySslDir}}/v2ray.crt --keypath {{V2raySslDir}}/v2ray.key --ecc

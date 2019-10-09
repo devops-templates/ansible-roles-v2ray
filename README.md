@@ -11,9 +11,11 @@ Debian 9/Ubuntu 18.04
 Available variables are listed below, along with default values (see defaults/main.yml):
 
 ```yaml
+ServerName: 'example.com'
 Clientid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
 HttpsPort: 443
 WsPath: '/ws'
+PlainPort: 1887
 TlsPort: 8887
 Http2Port: 8443
 Http2Path: '/h2'
@@ -44,9 +46,11 @@ Move `hosts.example` and `v2ray.yml` to the same parent directory of `v2ray`:
   roles:
     - role: 'v2ray'
       vars:
+        ServerName: 'example.com'
         Clientid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
         HttpsPort: 443
         WsPath: '/ws'
+        PlainPort: 1887
         TlsPort: 8887
         Http2Port: 8443
         Http2Path: '/h2'

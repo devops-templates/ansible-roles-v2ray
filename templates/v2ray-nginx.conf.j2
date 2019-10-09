@@ -11,7 +11,7 @@ server {
   ssl_certificate_key   {{V2raySslDir}}/v2ray.key;
   ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;
   ssl_ciphers           HIGH:!aNULL:!MD5;
-  server_name           ${Domain};
+  server_name           ${ServerName};
   location {{WsPath}} { 
 	  proxy_redirect off;
 	  proxy_pass http://127.0.0.1:1111;
