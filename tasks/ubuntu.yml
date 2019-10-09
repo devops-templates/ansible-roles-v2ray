@@ -1,0 +1,31 @@
+---
+- name: apt-get update
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: install nginx
+  apt:
+    name: nginx
+    state: present
+  notify:
+    - start nginx
+
+- name: upload v2ray-nginx.conf
+  template:
+    src: v2ray-nginx.conf.j2
+    dest: "/etc/nginx/sites-available/v2ray.conf"
+    owner: root
+    group: root
+    mode: 0644
+
+- name: enable nginx config
+  file:
+    src: "/etc/nginx/sites-available/v2ray.conf"
+    dest: "/etc/nginx/sites-enabled/v2ray.conf"
+    owner: root
+    group: root
+    mode: 0644
+    state: link
+  notify:
+    - restart nginx

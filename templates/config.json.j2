@@ -1,0 +1,92 @@
+{
+  "inbounds": [
+    {
+      "port": {{PlainPort}}, 
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "{{ClientId}}",  
+            "alterId": 64
+          }
+        ]
+      }
+    },
+    {
+      "port": {{TlsPort}}, 
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "{{ClientId}}",  
+            "alterId": 64
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "{{V2raySslDir}}/v2ray.crt", 
+              "keyFile": "{{V2raySslDir}}/v2ray.key" 
+            }
+          ]
+        }
+      }
+    },
+    {
+      "port": {{Http2Port}}, 
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "{{ClientId}}",  
+            "alterId": 64
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "h2",
+        "httpSettings": {
+          "path": "{{Http2Path}|"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "{{V2raySslDir}}/v2ray.crt", 
+              "keyFile": "{{V2raySslDir}}/v2ray.key" 
+            }
+          ]
+        }
+      }
+    },
+    {
+      "listen":"127.0.0.1",
+      "port": 1111, 
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "{{ClientId}}",  
+            "alterId": 64
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "{{WsPath}}"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",  
+      "settings": {}
+    }
+  ]
+}

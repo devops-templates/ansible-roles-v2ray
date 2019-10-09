@@ -11,11 +11,12 @@ Debian 9/Ubuntu 18.04
 Available variables are listed below, along with default values (see defaults/main.yml):
 
 ```yaml
-uuid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
-alterId: 64
-httpsPort: 443
-tlsPort: 8887
-h2Port: 8443
+Clientid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
+HttpsPort: 443
+WsPath: '/ws'
+TlsPort: 8887
+Http2Port: 8443
+Http2Path: '/h2'
 ```
 
 ## Dependencies
@@ -43,11 +44,12 @@ Move `hosts.example` and `v2ray.yml` to the same parent directory of `v2ray`:
   roles:
     - role: 'v2ray'
       vars:
-        uuid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
-        alterId: 64
-        httpsPort: 443
-        tlsPort: 8887
-        h2Port: 8443
+        Clientid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
+        HttpsPort: 443
+        WsPath: '/ws'
+        TlsPort: 8887
+        Http2Port: 8443
+        Http2Path: '/h2'
 ```
 
 Then run the playbook, like this:

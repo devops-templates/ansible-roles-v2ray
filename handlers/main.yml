@@ -1,0 +1,29 @@
+- name: restart v2ray
+  systemd:
+    name: v2ray
+    state: restarted
+- name: start v2ray
+  systemd:
+    name: v2ray
+    state: started
+    enabled: yes
+- name: stop v2ray
+  systemd:
+    name: v2ray
+    state: stopped
+- name: restart nginx
+  systemd:
+    name: nginx
+    state: restarted
+- name: start nginx
+  systemd:
+    name: nginx
+    state: started
+    enabled: yes
+- name: stop nginx
+  systemd:
+    name: nginx
+    state: stopped
+- name: daemon reload
+  systemd:
+    daemon_reload: yes

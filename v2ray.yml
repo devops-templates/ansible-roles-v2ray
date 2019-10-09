@@ -4,10 +4,9 @@
   roles:
     - role: 'v2ray'
       vars:
-          uuid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
-          alterId: 64
-          httpsPort: 443
-          wsPath: '/ws'
-          tlsPort: 8887
-          h2Port: 8443
-          h2Path: 'h2'
+          Clientid: '53eb9e88-fcdb-4499-8263-9b2ccb9b1802'
+          HttpsPort: 443
+          WsPath: '/ws'
+          TlsPort: 8887
+          Http2Port: 8443
+          Http2Path: '/h2'

@@ -1,0 +1,5 @@
+---
+V2rayRootDir: /opt/v2ray
+V2rayConfDir: {{V2rayRootDir}}/conf
+V2rayBinDir: {{V2rayRootDir}}/bin
+V2raySslDir: {{V2rayRootDir}}/ssl
